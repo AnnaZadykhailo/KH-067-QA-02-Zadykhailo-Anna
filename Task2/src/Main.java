@@ -5,7 +5,7 @@ public class Main {
 
         System.out.println("Enter at least three words divided by commas");
         Scanner in = new Scanner(System.in);
-        String str = in.next();
+        String str = in.nextLine();
 
         String [] array = str.split(",");
         String choise = "";
@@ -18,7 +18,7 @@ public class Main {
                     "4 - contains\n"+
                     "0 - exit");
 
-            choise = in.next();
+            choise = in.nextLine();
             String result = "";
 
             switch(choise) {
@@ -32,7 +32,7 @@ public class Main {
                     break;
                 case "2":
                     System.out.println("Enter first letters");
-                    String firstLetters = in.next();
+                    String firstLetters = in.nextLine();
                     for(String s : array) {
                         if (s.startsWith(firstLetters))
                             result += s + "\n";
@@ -40,7 +40,7 @@ public class Main {
                     break;
                 case "3":
                     System.out.println("Enter last letters");
-                    String lastLetters = in.next();
+                    String lastLetters = in.nextLine();
                     for(String s : array) {
                         if (s.endsWith(lastLetters))
                             result += s + "\n";
@@ -48,7 +48,7 @@ public class Main {
                     break;
                 case "4":
                     System.out.println("Enter part of the world");
-                    String part = in.next();
+                    String part = in.nextLine();
                     for(String s : array) {
                         if (s.contains(part))
                             result += s + "\n";
